@@ -1,0 +1,2 @@
+https://scotch.io/tutorials/simple-laravel-crud-with-resource-controllers
+https://laravel.com/docs/5.4/controllers
