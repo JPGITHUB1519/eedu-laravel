@@ -12,4 +12,5 @@
 */
 
 Route::get('/', 'MainController@index');
+Route::get('/programs', 'ProgramsController@index');
 Route::get('/admin', 'AdminController@index');
