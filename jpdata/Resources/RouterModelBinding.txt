@@ -1,0 +1,1 @@
+https://scotch.io/tutorials/cleaner-laravel-controllers-with-route-model-binding

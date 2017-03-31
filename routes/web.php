@@ -13,4 +13,8 @@
 
 Route::get('/', 'MainController@index');
 Route::get('/programs', 'ProgramsController@index');
+Route::get('/programs/{program}', 'ProgramsController@show');
 Route::get('/admin', 'AdminController@index');
+Route::get('/admin/programs', 'ProgramsController@admin_index');
+Route::post('/admin/programs', 'ProgramsController@store');
+Route::get('/admin/programs/create', 'ProgramsController@create');

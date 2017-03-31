@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Program;
 use Illuminate\Http\Request;
 
 class ProgramsController extends Controller
@@ -13,7 +13,14 @@ class ProgramsController extends Controller
      */
     public function index()
     {
-        return view('programs');
+        $programs = Program::all();
+        return view('programs.index', ["programs" => $programs]);
+    }
+
+    public function admin_index()
+    {
+        $programs = Program::all();
+        return view('programs.admin_index', ["programs" => $programs]);
     }
 
     /**
@@ -23,7 +30,7 @@ class ProgramsController extends Controller
      */
     public function create()
     {
-        //
+        return view('programs.create');
     }
 
     /**
@@ -34,7 +41,23 @@ class ProgramsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // validate program
+        $this->validate(request(), [
+                'name' => 'required',
+                'slogan' => 'required',
+                'description' => 'required',
+                'cost' => 'required'
+            ]);
+        $program = new Program;
+        $program->name = request('name');
+        $program->slogan = request('slogan');
+        $program->description = request('description');
+        $program->cost = request('cost');
+        $program->has_plus = request('has_plus');
+        $program->is_active = request('is_active');
+        $program->save();
+        return redirect('/programs');
+
     }
 
     /**
@@ -43,9 +66,9 @@ class ProgramsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Program $program)
     {
-        //
+        return view('programs.show', compact('program'));
     }
 
     /**
