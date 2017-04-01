@@ -21,6 +21,7 @@ class CreateProgramsTable extends Migration
             $table->decimal('cost',10,2);
             $table->boolean('has_plus');
             $table->boolean('is_active');
+            $table->float('rating')->default(0);
             $table->timestamps();
         });
     }

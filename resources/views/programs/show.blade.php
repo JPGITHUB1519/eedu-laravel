@@ -8,6 +8,11 @@
             <h1 class="page-header text-center">{{ $program->name }}</h1>
             <h3 class="text-center">{{ $program->slogan }}</h3>
         </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="rateYo" style="margin : 0 auto;"></div>
+            </div>
+        </div>
     </div>
     <!-- /.row -->
     <hr>
@@ -54,6 +59,14 @@
         </div>
 
     </div>
-    <!-- /.row -->
-    <!-- /.row -->
+    <!-- /.row -->  
+@endsection
+
+@section('custom_script')
+    <script type="text/javascript">
+        $("#rateYo").rateYo({
+            rating : {{ $program->rating }},
+            readOnly : true 
+        });
+    </script>
 @endsection

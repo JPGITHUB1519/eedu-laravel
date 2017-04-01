@@ -14,6 +14,7 @@
     <!-- Bootstrap Core CSS -->
     <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/3-col-portfolio.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -33,11 +34,15 @@
 
 	    <!-- footer !-->
 	    @include('layouts.footer')
-	   	<!-- jQuery -->
-	    <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
 	</div>
+    <!-- jQuery -->
+    <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="{{ asset('vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+    <!-- RateYo Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.js"></script>
+
+    @yield('custom_script')
 
 </body>
 
