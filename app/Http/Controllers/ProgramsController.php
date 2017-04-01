@@ -19,7 +19,7 @@ class ProgramsController extends Controller
 
     public function admin_index()
     {
-        $programs = Program::all();
+        $programs = Program::paginate(2);
         return view('programs.admin_index', ["programs" => $programs]);
     }
 

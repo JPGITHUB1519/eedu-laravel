@@ -34,6 +34,9 @@
 						</tr>
 					@endforeach
 				</table>
+				<div class="text-center">
+					{{ $programs->links() }}
+				</div>
 			</div>
 		</div>
 	</div>
