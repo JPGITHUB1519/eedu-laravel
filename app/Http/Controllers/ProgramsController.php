@@ -53,10 +53,10 @@ class ProgramsController extends Controller
         $program->slogan = request('slogan');
         $program->description = request('description');
         $program->cost = request('cost');
-        $program->has_plus = request('has_plus');
-        $program->is_active = request('is_active');
+        $program->has_plus = request('has_plus') ? True : False;
+        $program->is_active = request('is_active') ? True : False;
         $program->save();
-        return redirect('/programs');
+        return redirect('/admin/programs');
 
     }
 
@@ -77,9 +77,9 @@ class ProgramsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Program $program)
     {
-        //
+        return view('programs.edit', compact('program'));
     }
 
     /**
@@ -89,9 +89,16 @@ class ProgramsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Program $program)
     {
-        //
+        $program->name = request('name');
+        $program->slogan = request('slogan');
+        $program->description = request('description');
+        $program->cost = request('cost');
+        $program->has_plus = request('has_plus') ? True : False;
+        $program->is_active = request('is_active') ? True : False;
+        $program->update();
+        return redirect('/admin/programs');
     }
 
     /**
@@ -100,8 +107,9 @@ class ProgramsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Program $program)
     {
-        //
+        $program->delete();
+        return redirect('/admin/programs');
     }
 }

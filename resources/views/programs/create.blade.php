@@ -35,7 +35,8 @@
 						<input type="submit" class="btn btn-primary">
 					</div>
 				</form>
-			</form>
+				@include('layouts.errors')
+			</div>
 		</div>
 	</div>
 @endsection
