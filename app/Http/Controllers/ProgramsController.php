@@ -55,6 +55,7 @@ class ProgramsController extends Controller
         $program->cost = request('cost');
         $program->has_plus = request('has_plus') ? True : False;
         $program->is_active = request('is_active') ? True : False;
+        $program->rating = request('rating');
         $program->save();
         return redirect('/admin/programs');
 
@@ -97,6 +98,7 @@ class ProgramsController extends Controller
         $program->cost = request('cost');
         $program->has_plus = request('has_plus') ? True : False;
         $program->is_active = request('is_active') ? True : False;
+        $program->rating = request('rating');
         $program->update();
         return redirect('/admin/programs');
     }

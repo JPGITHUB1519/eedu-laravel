@@ -6,9 +6,10 @@
 				<div class="box-header with-border">
 					<h3 class="box-title">Edit Program</h3>
 				</div>
-				<form role="form" action="/admin/programs/{{ $program->id }}" method="POST">
+				<form role="form" action="/admin/programs/{{ $program->id }}" method="POST" id="program-form">
 					{{ method_field("PUT") }}
 					{{ csrf_field() }}
+					<input type="hidden" name="rating" id="program_rating"> 
 					<div class="box-body">
 						<div class="form-group">
 							<label>Name</label>
@@ -41,6 +42,11 @@
 								<label><input type="checkbox" name="is_active">is_active?</label>
 							@endif
 						</div>
+						<div class="form-group">
+							<label>Rating</label>
+							<div id="rater">
+							</div>
+						</div>
 						<input type="submit" class="btn btn-primary">
 					</div>
 				</form>
@@ -48,4 +54,17 @@
 			</div>
 		</div>
 	</div>
+@endsection
+
+@section('custom_script')
+	<script type="text/javascript">
+		$("#rater").rateYo({
+			// load rating from database
+			rating : {{ $program->rating }},
+		});
+
+		$("#program-form").submit(function() {
+			$("#program_rating").val($("#rater").rateYo("option", "rating"));
+		});
+	</script>
 @endsection

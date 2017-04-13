@@ -1,0 +1,1 @@
+https://laravel.com/docs/5.4/eloquent#eloquent-model-conventions

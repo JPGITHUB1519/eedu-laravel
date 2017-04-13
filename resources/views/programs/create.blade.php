@@ -7,8 +7,9 @@
 				<div class="box-header with-border">
 					<h3 class="box-title">Create Program</h3>
 				</div>
-				<form role="form" action="/admin/programs" method="POST">
+				<form role="form" action="/admin/programs" method="POST" id="program-form">
 					{{csrf_field()}}
+					<input type="hidden" name="rating" id="program_rating"> 
 					<div class="box-body">
 						<div class="form-group">
 							<label>Name</label>
@@ -32,6 +33,11 @@
 						<div class="checkbox">
 							<label><input type="checkbox" name="is_active">is_active?</label>
 						</div>
+						<div class="form-group">
+							<label>Rating</label>
+							<div id="rater">
+							</div>
+						</div>
 						<input type="submit" class="btn btn-primary">
 					</div>
 				</form>
@@ -39,4 +45,16 @@
 			</div>
 		</div>
 	</div>
+@endsection
+
+@section('custom_script')
+	<script type="text/javascript">
+		$("#rater").rateYo({
+
+		});
+
+		$("#program-form").submit(function() {
+			$("#program_rating").val($("#rater").rateYo("option", "rating"));
+		});
+	</script>
 @endsection
