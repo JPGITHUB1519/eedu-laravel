@@ -13,7 +13,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        // https for assets
+        if(env('REDIRECT_HTTPS'))
+        {
+            $url->forceSchema('https');
+        }
     }
 
     /**
