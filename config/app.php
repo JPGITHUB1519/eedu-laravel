@@ -1,6 +1,8 @@
 <?php
 
 return [
+    /* Flag to use SECURE HTTPS OR NOT FOR THE RESOURCES */
+    'use_ssl' => env('USE_SSL', true),
 
     /*
     |--------------------------------------------------------------------------
