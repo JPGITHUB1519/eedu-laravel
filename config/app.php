@@ -1,7 +1,11 @@
 <?php
 
 return [
-    /* Flag to use SECURE HTTPS OR NOT FOR THE RESOURCES */
+    /* 
+        Flag to use SECURE HTTPS OR NOT FOR THE RESOURCES  
+        Use this variable in all yours assets
+
+    */
     'use_ssl' => env('USE_SSL', true),
 
     /*

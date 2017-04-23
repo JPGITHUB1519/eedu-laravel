@@ -12,18 +12,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
   <!-- {{ asset('css/vendor/bootstrap.css') }} -->
-  <link rel="stylesheet" href="{{ asset('/bower_components/adminLTE/bootstrap/css/bootstrap.min.css') }} ">
+  <link rel="stylesheet" href="{{ asset('/bower_components/adminLTE/bootstrap/css/bootstrap.min.css', config('app.use_ssl')) }} ">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="{{ asset('/bower_components/adminLTE/dist/css/AdminLTE.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('/bower_components/adminLTE/dist/css/AdminLTE.min.css', config('app.use_ssl')) }}">
   <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
         page. However, you can choose any other skin. Make sure you
         apply the skin class to the body tag so the changes take effect.
   -->
-  <link rel="stylesheet" href="{{ asset('/bower_components/adminLTE/dist/css/skins/skin-blue.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('/bower_components/adminLTE/dist/css/skins/skin-blue.min.css', config('app.use_ssl')) }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -169,11 +169,11 @@ desired effect
 <!-- REQUIRED JS SCRIPTS -->
 
 <!-- jQuery 2.2.3 -->
-<script src="{{ asset('/bower_components/adminLTE/plugins/jQuery/jquery-2.2.3.min.js') }}"></script>
+<script src="{{ asset('/bower_components/adminLTE/plugins/jQuery/jquery-2.2.3.min.js', config('app.use_ssl')) }}"></script>
 <!-- Bootstrap 3.3.6 -->
-<script src="{{ asset('/bower_components/adminLTE/bootstrap/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('/bower_components/adminLTE/bootstrap/js/bootstrap.min.js', config('app.use_ssl')) }}"></script>
 <!-- AdminLTE App -->
-<script src="{{ asset('/bower_components/adminLTE/dist/js/app.min.js') }}"></script>
+<script src="{{ asset('/bower_components/adminLTE/dist/js/app.min.js', config('app.use_ssl')) }}"></script>
 <!-- RateYo Library -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.js"></script>
 

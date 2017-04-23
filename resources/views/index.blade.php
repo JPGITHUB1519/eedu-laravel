@@ -75,18 +75,18 @@
     @include('layouts/main_footer')
 
     <!-- jQuery -->
-    <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('vendor/jquery/jquery.min.js', config('app.use_ssl')) }}"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="{{ asset('vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('vendor/bootstrap/js/bootstrap.min.js', config('app.use_ssl')) }}"></script>
 
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="{{ asset('vendor/scrollreveal/scrollreveal.min.js') }}"></script>
-    <script src="{{ asset('vendor/magnific-popup/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('vendor/scrollreveal/scrollreveal.min.js', config('app.use_ssl')) }}"></script>
+    <script src="{{ asset('vendor/magnific-popup/jquery.magnific-popup.min.js', config('app.use_ssl')) }}"></script>
 
     <!-- Theme JavaScript -->
-    <script src="{{ asset('js/creative.min.js') }}"></script>
+    <script src="{{ asset('js/creative.min.js', config('app.use_ssl')) }}"></script>
 
 </body>
 

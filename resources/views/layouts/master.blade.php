@@ -12,8 +12,8 @@
     <title>@yield('title')</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/3-col-portfolio.css') }}">
+    <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css', config('app.use_ssl')) }}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/3-col-portfolio.css', config('app.use_ssl')) }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -36,9 +36,9 @@
 	    @include('layouts.footer')
 	</div>
     <!-- jQuery -->
-    <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('vendor/jquery/jquery.min.js', config('app.use_ssl')) }}"></script>
     <!-- Bootstrap Core JavaScript -->
-    <script src="{{ asset('vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('vendor/bootstrap/js/bootstrap.min.js', config('app.use_ssl')) }}"></script>
     <!-- RateYo Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.js"></script>
 
