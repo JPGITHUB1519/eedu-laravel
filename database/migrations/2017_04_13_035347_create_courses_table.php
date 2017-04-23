@@ -15,6 +15,7 @@ class CreateCoursesTable extends Migration
     {
         Schema::create('courses', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
             $table->text("description");
             $table->text("slogan");
             $table->string("skill_level", 45);
