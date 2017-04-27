@@ -24,3 +24,5 @@ Route::put('/admin/programs/{program}', 'ProgramsController@update');
 Route::delete('/admin/programs/{program}', 'ProgramsController@destroy');
 // courses
 Route::get('/admin/courses', 'CoursesController@admin_index');
+Route::get('/courses', 'CoursesController@index');
+Route::get("/courses/{course}", 'CoursesController@show');

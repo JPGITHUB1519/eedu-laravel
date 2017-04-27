@@ -5,6 +5,7 @@
     <!-- Portfolio Item Heading -->
     <div class="row">
         <div class="col-lg-12">
+            <h3 class="text-center">Nanodegree Program</h3>
             <h1 class="page-header text-center">{{ $program->name }}</h1>
             <h3 class="text-center">{{ $program->slogan }}</h3>
         </div>
@@ -27,7 +28,7 @@
     </div>
     <!-- /.row -->
 
-    <!-- Related Projects Row -->
+    <!-- Related Courses -->
     <div class="row">
 
         <div class="col-lg-12">
@@ -37,7 +38,7 @@
         @if(count($program->courses))
             @foreach($program->courses as $course)
                 <div class="col-sm-4 col-xs-6">
-                    <a href="#" class="text-center">
+                    <a href="/courses/{{ $course->id }}" class="text-center">
                         <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
                         <p>{{ $course->name }}</p>
                     </a>
