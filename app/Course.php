@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Course extends Model
 {
-	public $table = "programs";
+	public $table = "courses";
     // The Programs that the course belongs
     public function programs()
     {

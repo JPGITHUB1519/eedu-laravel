@@ -34,30 +34,18 @@
             <h3 class="page-header">Featured Courses</h3>
         </div>
 
-        <div class="col-sm-3 col-xs-6">
-            <a href="#">
-                <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
-            </a>
-        </div>
+        @if(count($program->courses))
+            @foreach($program->courses as $course)
+                <div class="col-sm-4 col-xs-6">
+                    <a href="#" class="text-center">
+                        <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
+                        <p>{{ $course->name }}</p>
+                    </a>
+                    <p class="text-center">{{ $course->description }}</p>
+                </div>
 
-        <div class="col-sm-3 col-xs-6">
-            <a href="#">
-                <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
-            </a>
-        </div>
-
-        <div class="col-sm-3 col-xs-6">
-            <a href="#">
-                <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
-            </a>
-        </div>
-
-        <div class="col-sm-3 col-xs-6">
-            <a href="#">
-                <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
-            </a>
-        </div>
-
+            @endforeach
+        @endif
     </div>
     <!-- /.row -->  
 @endsection
