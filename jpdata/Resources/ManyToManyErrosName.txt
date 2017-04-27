@@ -1,0 +1,3 @@
+http://stackoverflow.com/questions/34897444/naming-tables-in-many-to-many-relationships-laravel
+
+return $this->belongsToMany('App\Feature', 'product_feature');
