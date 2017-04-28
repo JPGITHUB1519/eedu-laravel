@@ -17,7 +17,6 @@
     </div>
     <!-- /.row -->
     <hr>
-    <!-- Portfolio Item Row -->
     <div class="row">
         <div class="col-md-6">
             <p>{{ $course->description }}</p>
@@ -27,6 +26,28 @@
         </div>
     </div>
     <!-- /.row -->
+
+    <!-- lessons -->
+    <hr>
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="text-center">What Will You learn?</h2>
+        </div>
+    </div>
+    <div class="row" style="margin : 10px; padding: 10px;">
+        @foreach($course->getLessonsOrdered()->get() as $lesson)
+            <div class="col-md-4">
+                <h3>Lesson {{ $lesson->lesson_number }}</h3>
+                <a href="">{{ $lesson->name }}</a>
+                <!-- Lesson Detail -->
+                <ul>
+                    @foreach($lesson->getLessonsDetailsOrdered()->get() as $lesson_detail)
+                        <li>{{ $lesson_detail->description }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endforeach
+    </div>
 @endsection
 
 @section('custom_script')

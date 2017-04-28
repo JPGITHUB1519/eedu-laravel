@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Course;
+use App\Lesson;
 
 class CoursesController extends Controller
 {
@@ -53,7 +54,8 @@ class CoursesController extends Controller
      */
     public function show(Course $course)
     {
-        return view('courses.show', compact('course'));
+        $lessons = Lesson::orderBy('lesson_number', 'ASC')->get();
+        return view('courses.show', compact('course', 'lessons'));
     }
 
     /**
