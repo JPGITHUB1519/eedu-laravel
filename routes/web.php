@@ -33,3 +33,6 @@ Route::post('/admin/courses', 'CoursesController@store');
 Route::get('/admin/courses/{course}/edit', 'CoursesController@edit');
 Route::put('/admin/courses/{course}', 'CoursesController@update');
 Route::delete('/admin/courses/{course}', 'CoursesController@destroy');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
