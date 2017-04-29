@@ -32,7 +32,7 @@ class CoursesController extends Controller
      */
     public function create()
     {
-        //
+        return view('courses.create');
     }
 
     /**
@@ -43,7 +43,24 @@ class CoursesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate(request(), [
+                'name' => 'required',
+                'slogan' => 'required',
+                'description' => 'required',
+                'skill_level' => 'required',
+                'cost' => 'required',
+            ]);
+        $course = new Course;
+        $course->name = request('name');
+        $course->slogan = request('slogan');
+        $course->description = request('description');
+        $course->cost = request('cost');
+        $course->skill_level = request('skill_level');
+        $course->is_active = request('is_active') ? True : False;
+        $course->rating = request('rating');
+        $course->save();
+        return redirect('/admin/courses');
+
     }
 
     /**
@@ -64,9 +81,9 @@ class CoursesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Course $course)
     {
-        //
+        return view('courses.edit', compact('course'));
     }
 
     /**
@@ -76,9 +93,17 @@ class CoursesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Course $course)
     {
-        //
+        $course->name = request('name');
+        $course->slogan = request('slogan');
+        $course->description = request('description');
+        $course->cost = request('cost');
+        $course->skill_level = request('skill_level');
+        $course->is_active = request('is_active') ? True : False;
+        $course->rating = request('rating');
+        $course->update();
+        return redirect('/admin/courses');
     }
 
     /**
@@ -87,8 +112,9 @@ class CoursesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Course $course)
     {
-        //
+        $course->delete();
+        return redirect('/admin/courses');
     }
 }

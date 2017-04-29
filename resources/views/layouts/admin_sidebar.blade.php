@@ -39,7 +39,7 @@
         </a>
         <ul class="treeview-menu">
           <li><a href="/admin/programs">Programs</a></li>
-          <li><a href="#">Link in level 2</a></li>
+          <li><a href="/admin/courses">Courses</a></li>
         </ul>
       </li>
       <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
