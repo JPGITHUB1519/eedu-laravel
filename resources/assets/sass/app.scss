@@ -2,33 +2,20 @@
 // Fonts
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
 
-// Variables
-@import "variables";
 
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
-/*!
- * Start Bootstrap - 3 Col Portfolio (http://startbootstrap.com/)
- * Copyright 2013-2016 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
- */
+// import folder structure
 
-.portfolio-item {
-    margin-bottom: 25px;
-}
+// modules
+@import "modules/variables";
 
-footer {
-    margin: 50px 0;
-}
+// partials
+@import "partials/center";
+// main style
+@import "partials/main";
+@import "partials/flash";
 
-.flash-message
-{
-	position: fixed;
-    top: 50px;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    // this is important, always in front of the others elements
-    z-index: 999;
-}
+// vendor
+// @import "vendor/*";

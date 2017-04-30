@@ -1,0 +1,10 @@
+.flash-message
+{
+	position: fixed;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    // this is important, always in front of the others elements
+    z-index: 999;
+}
