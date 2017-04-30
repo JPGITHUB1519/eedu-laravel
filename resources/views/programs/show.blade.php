@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.main.master')
 
 @section('title') {{ $program-> name }} @endsection
 @section('content')

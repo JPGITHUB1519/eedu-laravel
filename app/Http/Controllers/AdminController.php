@@ -35,6 +35,6 @@ class AdminController extends Controller
                         'color' => 'success'
                 ]
         ];
-    	return view('layouts/admin_test')->with($data);
+    	return view('dashboard')->with($data);
     }
 }

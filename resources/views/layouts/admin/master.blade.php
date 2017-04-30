@@ -58,9 +58,9 @@ desired effect
   <!-- flash message -->
   @include('layouts.flash')
   <!-- Main Header -->
-  @include('layouts/admin_header')
+  @include('layouts.admin.header')
   <!-- Left side column. contains the logo and sidebar -->
-  @include('layouts/admin_sidebar')
+  @include('layouts/admin.sidebar')
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -87,7 +87,7 @@ desired effect
   <!-- /.content-wrapper -->
 
   <!-- Main Footer -->
-  @include('layouts/admin_footer')
+  @include('layouts/admin.footer')
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Create the tabs -->

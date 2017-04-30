@@ -35,7 +35,7 @@
 <body id="page-top">
     <!-- flash message -->
     @include('layouts.flash')
-    @include('layouts/main_header')
+    @include('layouts.landing.header')
     <header>
         <div class="header-content">
             <div class="header-content-inner">
@@ -60,9 +60,9 @@
         </div>
     </section>
 
-    @include('layouts/main_services')
+    @include('layouts.landing.services')
 
-    @include('layouts/main_showcase')
+    @include('layouts.landing.showcase')
 
     <aside class="bg-dark">
         <div class="container text-center">
@@ -73,7 +73,7 @@
         </div>
     </aside>
 
-    @include('layouts/main_footer')
+    @include('layouts.landing.footer')
 
     <!-- jQuery -->
     {{-- <script src="{{ asset('vendor/jquery/jquery.min.js', config('app.use_ssl')) }}"></script> --}}

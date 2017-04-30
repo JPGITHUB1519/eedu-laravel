@@ -29,7 +29,7 @@
 
 <body>
     <!-- Navigation -->
-    @include('layouts.nav')
+    @include('layouts.main.nav')
     @include('layouts.flash')
 
     <div class="container">
@@ -37,7 +37,7 @@
 	    @yield('content')
 
 	    <!-- footer !-->
-	    @include('layouts.footer')
+	    @include('layouts.main.footer')
 	</div>
     <!-- jQuery -->
     {{-- <script src="{{ asset('vendor/jquery/jquery.min.js', config('app.use_ssl')) }}"></script> --}}
