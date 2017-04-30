@@ -9,17 +9,16 @@
     <meta name="author" content="">
 
     <title>Creative - Start Bootstrap Theme</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css', config('app.use_ssl')) }}" rel="stylesheet">
-
+    <!-- Bootstrap Core CSS, this is not include because laravel already come with bootstrap -->
+    {{--  <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css', config('app.use_ssl')) }}" rel="stylesheet"> --}}
+    <!-- app.css laravel generated css file -->
+    <link href="{{ asset('css/app.css', config('app.use_ssl')) }}" rel="stylesheet">
     <!-- Custom Fonts -->
-    <link href="{{ asset('vendor/font-awesome/css/font-awesome.min.css', config('app.use_ssl')) }}" rel="stylesheet" type="text/css">
+    {{-- <link href="{{ asset('vendor/font-awesome/css/font-awesome.min.css', config('app.use_ssl')) }}" rel="stylesheet" type="text/css"> --}}
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-
     <!-- Plugin CSS -->
-    <link href="{{ asset('vendor/magnific-popup/magnific-popup.css', config('app.use_ssl')) }}" rel="stylesheet">
+    {{-- <link href="{{ asset('vendor/magnific-popup/magnific-popup.css', config('app.use_ssl')) }}" rel="stylesheet"> --}}
 
     <!-- Theme CSS -->
     <link href="{{ asset('css/creative.min.css', config('app.use_ssl')) }}" rel="stylesheet">
@@ -34,6 +33,8 @@
 </head>
 
 <body id="page-top">
+    <!-- flash message -->
+    @include('layouts.flash')
     @include('layouts/main_header')
     <header>
         <div class="header-content">

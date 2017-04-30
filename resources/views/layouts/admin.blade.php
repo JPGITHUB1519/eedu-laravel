@@ -55,7 +55,8 @@ desired effect
 -->
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
-
+  <!-- flash message -->
+  @include('layouts.flash')
   <!-- Main Header -->
   @include('layouts/admin_header')
   <!-- Left side column. contains the logo and sidebar -->

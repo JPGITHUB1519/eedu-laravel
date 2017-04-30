@@ -11,8 +11,10 @@
 
     <title>@yield('title')</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css', config('app.use_ssl')) }}" rel="stylesheet">
+    <!-- Bootstrap Core CSS, this is not include because laravel already come with bootstrap -->
+    {{-- <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css', config('app.use_ssl')) }}" rel="stylesheet"> --}}
+    <!-- app.css laravel generated css file -->
+    <link href="{{ asset('css/app.css', config('app.use_ssl')) }}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/3-col-portfolio.css', config('app.use_ssl')) }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.css">
 
@@ -28,6 +30,8 @@
 <body>
     <!-- Navigation -->
     @include('layouts.nav')
+    @include('layouts.flash')
+
     <div class="container">
 	    <!-- Page Content -->
 	    @yield('content')

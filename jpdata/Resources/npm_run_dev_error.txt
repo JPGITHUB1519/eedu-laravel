@@ -1,0 +1,14 @@
+1- 'cross-env' is not recognized as an internal or external command,
+operable program or batch file.
+
+2-  throw er; // Unhandled 'error' event
+
+Resolve:
+
+	https://github.com/JeffreyWay/laravel-mix/issues/623
+
+Steps:
+	run composer install;
+	run npm install;
+	run npm install cross-env -D (read it from laravel/framework#18446);
+	run npm run dev.
