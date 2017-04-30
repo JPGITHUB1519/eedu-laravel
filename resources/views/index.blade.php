@@ -14,11 +14,11 @@
     <!-- app.css laravel generated css file -->
     <link href="{{ asset('css/app.css', config('app.use_ssl')) }}" rel="stylesheet">
     <!-- Custom Fonts -->
-    {{-- <link href="{{ asset('vendor/font-awesome/css/font-awesome.min.css', config('app.use_ssl')) }}" rel="stylesheet" type="text/css"> --}}
+    <link href="{{ asset('vendor/font-awesome/css/font-awesome.min.css', config('app.use_ssl')) }}" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
     <!-- Plugin CSS -->
-    {{-- <link href="{{ asset('vendor/magnific-popup/magnific-popup.css', config('app.use_ssl')) }}" rel="stylesheet"> --}}
+    <link href="{{ asset('vendor/magnific-popup/magnific-popup.css', config('app.use_ssl')) }}" rel="stylesheet">
 
     <!-- Theme CSS -->
     <link href="{{ asset('css/creative.min.css', config('app.use_ssl')) }}" rel="stylesheet">
@@ -76,10 +76,13 @@
     @include('layouts/main_footer')
 
     <!-- jQuery -->
-    <script src="{{ asset('vendor/jquery/jquery.min.js', config('app.use_ssl')) }}"></script>
+    {{-- <script src="{{ asset('vendor/jquery/jquery.min.js', config('app.use_ssl')) }}"></script> --}}
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="{{ asset('vendor/bootstrap/js/bootstrap.min.js', config('app.use_ssl')) }}"></script>
+    {{-- <script src="{{ asset('vendor/bootstrap/js/bootstrap.min.js', config('app.use_ssl')) }}"></script> --}}
+
+    <!-- this include bootstrap and jquery too --> 
+    <script src="{{ asset('js/app.js', config('app.use_ssl')) }}"></script>
 
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>

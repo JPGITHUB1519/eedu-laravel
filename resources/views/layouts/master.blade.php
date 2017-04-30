@@ -40,9 +40,12 @@
 	    @include('layouts.footer')
 	</div>
     <!-- jQuery -->
-    <script src="{{ asset('vendor/jquery/jquery.min.js', config('app.use_ssl')) }}"></script>
+    {{-- <script src="{{ asset('vendor/jquery/jquery.min.js', config('app.use_ssl')) }}"></script> --}}
     <!-- Bootstrap Core JavaScript -->
-    <script src="{{ asset('vendor/bootstrap/js/bootstrap.min.js', config('app.use_ssl')) }}"></script>
+    {{-- <script src="{{ asset('vendor/bootstrap/js/bootstrap.min.js', config('app.use_ssl')) }}"></script> --}}
+    
+    <!-- this include bootstrap and jquery too --> 
+    <script src="{{ asset('js/app.js', config('app.use_ssl')) }}"></script>
     <!-- RateYo Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.js"></script>
 
