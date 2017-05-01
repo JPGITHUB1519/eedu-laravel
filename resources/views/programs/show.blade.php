@@ -52,10 +52,5 @@
 @endsection
 
 @section('custom_script')
-    <script type="text/javascript">
-        $("#rateYo").rateYo({
-            rating : {{ $program->rating }},
-            readOnly : true 
-        });
-    </script>
+    @include('layouts.rateyo')
 @endsection
