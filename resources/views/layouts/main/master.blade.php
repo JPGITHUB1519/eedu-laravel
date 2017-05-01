@@ -47,7 +47,7 @@
     <!-- RateYo Library -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.js"></script> -->
     <!-- this include bootstrap and jquery too --> 
-    <script src="{{ asset('js/app.js', config('app.use_ssl')) }}"></script>
+    {{-- <script src="{{ asset('js/app.js', config('app.use_ssl')) }}"></script> --}}
     @yield('custom_script')
 
 </body>
