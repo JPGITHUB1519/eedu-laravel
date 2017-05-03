@@ -13,8 +13,6 @@
 
     <!-- Bootstrap Core CSS, this is not include because laravel already come with bootstrap -->
     {{-- <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css', config('app.use_ssl')) }}" rel="stylesheet"> --}}
-    <!-- app.css laravel generated css file -->
-    <link href="{{ asset('css/app.css', config('app.use_ssl')) }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -23,9 +21,12 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    <!-- Require js library -->
+    <!-- data main-> config file -->
+    <script type="text/javascript" data-main="{{ asset('js/config', config('app.use_ssl')) }}" src="{{ asset('js/libs/require.js', config('app.use_ssl')) }}"></script>
+    <!-- app.css laravel generated css file -->
+    <link href="{{ asset('css/app.css', config('app.use_ssl')) }}" rel="stylesheet">
 </head>
-
 <body>
     <!-- Navigation -->
     @include('layouts.main.nav')
@@ -42,12 +43,11 @@
     {{-- <script src="{{ asset('vendor/jquery/jquery.min.js', config('app.use_ssl')) }}"></script> --}}
     <!-- Bootstrap Core JavaScript -->
     {{-- <script src="{{ asset('vendor/bootstrap/js/bootstrap.min.js', config('app.use_ssl')) }}"></script> --}}
-    
-    <!-- this include bootstrap and jquery too --> 
-    <script src="{{ asset('js/app.js', config('app.use_ssl')) }}"></script>
-    <!-- RateYo Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.js"></script>
 
+    <!-- RateYo Library -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.js"></script> -->
+    <!-- this include bootstrap and jquery too --> 
+    {{-- <script src="{{ asset('js/app.js', config('app.use_ssl')) }}"></script> --}}
     @yield('custom_script')
 
 </body>

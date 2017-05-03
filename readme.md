@@ -79,6 +79,7 @@ git push origin heroku
 
 * jQuery 3.2.1
 
+* requireJS
 
 ## Production Hosting
 

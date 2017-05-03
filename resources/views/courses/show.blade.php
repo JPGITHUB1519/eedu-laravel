@@ -52,9 +52,16 @@
 
 @section('custom_script')
     <script type="text/javascript">
-        $("#rateYo").rateYo({
-            rating : {{ $course->rating }},
-            readOnly : true 
+        // $("#rateYo").rateYo({
+        //     rating : {{ $course->rating }},
+        //     readOnly : true 
+        // });
+        
+        // loading the scripts for this page
+        require(['config'], function() {
+            require(["commons/rateYo-activations"], function(obj) {
+                obj.showRating({{ $course->rating }});
+            });
         });
     </script>
 @endsection

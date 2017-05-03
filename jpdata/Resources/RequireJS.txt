@@ -1,0 +1,17 @@
+Indian tutorial playlist
+	https://www.youtube.com/watch?v=6tgtzygpPc0&index=6&list=PLYxzS__5yYQmDD-0A0Jvy27lUnrGIsq9o
+
+SitePoint Tutorial
+	https://www.sitepoint.com/understanding-requirejs-for-effective-javascript-module-loading/
+
+Returning Multiples functions
+
+	http://stackoverflow.com/questions/23081535/requirejs-how-to-load-multiple-functions-from-one-module
+
+
+Resumen RequireJS made ridiculously easy, in just 10ish minutes
+	https://www.youtube.com/watch?v=eRqsZqLyYaU
+
+RequireJS made ridiculously easy - Part 2 of 2 - AMDifying scripts & RequireJS Optimizer
+
+https://www.youtube.com/watch?v=_n4-zAhaHSM
