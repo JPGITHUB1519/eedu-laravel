@@ -14,20 +14,18 @@
     <!-- Bootstrap Core CSS, this is not include because laravel already come with bootstrap -->
     {{-- <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css', config('app.use_ssl')) }}" rel="stylesheet"> --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.css">
-
+    <!-- app.css laravel generated css file -->
+    <link href="{{ asset('css/app.css', config('app.use_ssl')) }}" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <!-- Require js library -->
     <!-- data main-> config file -->
     <script type="text/javascript" data-main="{{ asset('js/config', config('app.use_ssl')) }}" src="{{ asset('js/libs/require.js', config('app.use_ssl')) }}"></script>
-    <!-- app.css laravel generated css file -->
-    <link href="{{ asset('css/app.css', config('app.use_ssl')) }}" rel="stylesheet">
 </head>
-<body>
+<body class="large-padding-top">
     <!-- Navigation -->
     @include('layouts.main.nav')
     @include('layouts.flash')
