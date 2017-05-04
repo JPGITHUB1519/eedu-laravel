@@ -57,15 +57,5 @@
 @endsection
 
 @section('custom_script')
-	{{-- <script type="text/javascript">
-		$("#rater").rateYo({
-			// load rating from database
-			rating : {{ $program->rating }},
-		});
-
-		$("#form").submit(function() {
-			$("#rating").val($("#rater").rateYo("option", "rating"));
-		});
-	</script> --}}
 	@include('layouts.rateyo-edit-submiter', ['model' => $program])
 @endsection

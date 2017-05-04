@@ -52,17 +52,4 @@
 	</div>
 @endsection
 
-{{-- 
-@section('custom_script')
-	<script type="text/javascript">
-		$("#rater").rateYo({
-
-		});
-
-		$("#form").submit(function() {
-			$("#rating").val($("#rater").rateYo("option", "rating"));
-		});
-	</script>
-@endsection --}}
-
 @include("rateyo-submiter");
