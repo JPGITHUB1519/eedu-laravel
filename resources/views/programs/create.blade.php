@@ -7,9 +7,9 @@
 				<div class="box-header with-border">
 					<h3 class="box-title">Create Program</h3>
 				</div>
-				<form role="form" action="/admin/programs" method="POST" id="program-form">
+				<form role="form" action="/admin/programs" method="POST" id="form">
 					{{csrf_field()}}
-					<input type="hidden" name="rating" id="program_rating"> 
+					<input type="hidden" name="rating" id="rating"> 
 					<div class="box-body">
 						<div class="form-group">
 							<label>Name</label>
@@ -47,14 +47,17 @@
 	</div>
 @endsection
 
+
+{{-- 
 @section('custom_script')
 	<script type="text/javascript">
 		$("#rater").rateYo({
 
 		});
 
-		$("#program-form").submit(function() {
-			$("#program_rating").val($("#rater").rateYo("option", "rating"));
+		$("#form").submit(function() {
+			$("#rating").val($("#rater").rateYo("option", "rating"));
 		});
 	</script>
-@endsection
+@endsection --}}
+@include("rateyo-submiter");

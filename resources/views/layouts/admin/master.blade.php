@@ -26,6 +26,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="{{ asset('/bower_components/adminLTE/dist/css/skins/skin-blue.min.css', config('app.use_ssl')) }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.css">
 
+  <!-- requireJS -->
+  <script type="text/javascript" data-main="{{ asset('js/config', config('app.use_ssl')) }}" src="{{ asset('js/libs/require.js', config('app.use_ssl')) }}"></script>
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -168,7 +170,6 @@ desired effect
 <!-- ./wrapper -->
 
 <!-- REQUIRED JS SCRIPTS -->
-
 <!-- jQuery 2.2.3 -->
 <script src="{{ asset('/bower_components/adminLTE/plugins/jQuery/jquery-2.2.3.min.js', config('app.use_ssl')) }}"></script>
 <!-- Bootstrap 3.3.6 -->
@@ -176,7 +177,13 @@ desired effect
 <!-- AdminLTE App -->
 <script src="{{ asset('/bower_components/adminLTE/dist/js/app.min.js', config('app.use_ssl')) }}"></script>
 <!-- RateYo Library -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.js"></script>
+{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.js"></script> --}}
+
+{{-- <script type="text/javascript">
+  require(["config"], function(){
+    require(["commons/tester"]);
+  });
+</script> --}}
 
 @yield('custom_script')
 

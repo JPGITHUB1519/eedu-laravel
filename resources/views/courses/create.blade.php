@@ -52,6 +52,7 @@
 	</div>
 @endsection
 
+{{-- 
 @section('custom_script')
 	<script type="text/javascript">
 		$("#rater").rateYo({
@@ -62,4 +63,6 @@
 			$("#rating").val($("#rater").rateYo("option", "rating"));
 		});
 	</script>
-@endsection
+@endsection --}}
+
+@include("rateyo-submiter");

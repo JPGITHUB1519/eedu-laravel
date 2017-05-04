@@ -1,0 +1,2 @@
+https://github.com/jsdoc3/jsdoc
+node_modules\.bin\jsdoc public\js\commons\rateYo-activations.js
