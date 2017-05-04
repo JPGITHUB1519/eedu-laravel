@@ -15,3 +15,7 @@ Resumen RequireJS made ridiculously easy, in just 10ish minutes
 RequireJS made ridiculously easy - Part 2 of 2 - AMDifying scripts & RequireJS Optimizer
 
 https://www.youtube.com/watch?v=_n4-zAhaHSM
+
+Good Article
+
+	http://blog.teamtreehouse.com/organize-your-code-with-requirejs
