@@ -49,7 +49,6 @@ class ProgramsController extends Controller
                 'description' => 'required',
                 'cost' => 'required'
             ]);
-        dd(request('skill_level'));
         $program = new Program;
         $program->name = request('name');
         $program->slogan = request('slogan');

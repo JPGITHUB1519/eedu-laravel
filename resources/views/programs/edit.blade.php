@@ -6,10 +6,10 @@
 				<div class="box-header with-border">
 					<h3 class="box-title">Edit Program</h3>
 				</div>
-				<form role="form" action="/admin/programs/{{ $program->id }}" method="POST" id="program-form">
+				<form role="form" action="/admin/programs/{{ $program->id }}" method="POST" id="form">
 					{{ method_field("PUT") }}
 					{{ csrf_field() }}
-					<input type="hidden" name="rating" id="program_rating"> 
+					<input type="hidden" name="rating" id="rating"> 
 					<div class="box-body">
 						<div class="form-group">
 							<label>Name</label>
@@ -57,14 +57,5 @@
 @endsection
 
 @section('custom_script')
-	<script type="text/javascript">
-		$("#rater").rateYo({
-			// load rating from database
-			rating : {{ $program->rating }},
-		});
-
-		$("#program-form").submit(function() {
-			$("#program_rating").val($("#rater").rateYo("option", "rating"));
-		});
-	</script>
+	@include('layouts.rateyo-edit-submiter', ['model' => $program])
 @endsection
