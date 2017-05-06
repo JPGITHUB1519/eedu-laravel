@@ -13,4 +13,10 @@ class Program extends Model
     	// params @model, @table
     	return $this->belongsToMany('App\Course', 'programs_vs_courses');
     }
+
+    // the leaders of the programs
+    public function leaders()
+    {
+    	return $this->belongsToMany('App\Leader', 'programs_vs_leaders');
+    }
 }
