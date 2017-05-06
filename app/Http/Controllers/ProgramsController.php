@@ -14,7 +14,7 @@ class ProgramsController extends Controller
     public function index()
     {
         $programs = Program::all();
-        session()->flash("message", "hola");
+        // session()->flash("message", "hola");
         return view('programs.index', ["programs" => $programs]);
     }
 

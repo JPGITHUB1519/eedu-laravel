@@ -20,9 +20,9 @@ class CreateLeadersTable extends Migration
             $table->date('birthdate');
             $table->string('sex', 1);
             $table->string('profession', 50);
-            $table->string('nacionality', 50);
+            $table->string('nationality', 50);
             $table->string('email', 50);
-            $table->string('image_url', 50);
+            $table->text('image_url');
             $table->timestamps();
         });
     }
