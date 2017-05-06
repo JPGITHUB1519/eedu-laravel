@@ -29,4 +29,12 @@ class Course extends Model
     {
     	return $this->lessons()->OrderBy('lesson_number', 'ASC');
     }
+
+    /**
+        * The Leaders of the courses
+    */
+    public function leaders()
+    {
+        return $this->belongsToMany('App\Leader', 'courses_vs_leaders');
+    }
 }
