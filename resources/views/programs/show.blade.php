@@ -30,7 +30,6 @@
 
     <!-- Related Courses -->
     <div class="row">
-
         <div class="col-lg-12">
             <h3 class="page-header">Featured Courses</h3>
         </div>
@@ -49,6 +48,22 @@
         @endif
     </div>
     <!-- /.row -->  
+
+    <!-- Related Leaders -->
+    <div class="row">
+        <div class="col-xs-12">
+            <h3 class="page-header">Programs Leaders</h3>
+            <div class="row">
+                @foreach($program->leaders as $leader)
+                    <div class="col-xs-4">
+                        <p class="text-center text-bold">{{ $leader->name }}</p>
+                        <img src="{{ $leader->image_url }}" class="img-circle img-little center-block">
+                        <p class="text-center little-padding-top">{{ $leader->profession }}</p>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
 @endsection
 
 @section('custom_script')
