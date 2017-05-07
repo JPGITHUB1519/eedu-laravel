@@ -95,9 +95,8 @@ class LeadersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Leader $leader)
     {
-        $leader = new Leader;
         $leader->name = request("name");
         $leader->lastname = request('lastname');
         $leader->birthdate = request('birthdate');
@@ -121,8 +120,9 @@ class LeadersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Leader $leader)
     {
-        //
+        $leader->delete();
+        return redirect('/admin/leaders');
     }
 }
