@@ -39,5 +39,7 @@ Route::delete('/admin/courses/{course}', 'CoursesController@destroy');
 Route::get("/admin/leaders", 'LeadersController@admin_index');
 Route::get("/admin/leaders/create", "LeadersController@create");
 Route::post('/admin/leaders', "LeadersController@store");
+Route::get("/admin/leaders/{leader}/edit", 'LeadersController@edit');
+Route::put("/admin/leaders/{leader}", 'LeadersController@update');
 Route::get('/home', 'HomeController@index');
 Auth::routes();
