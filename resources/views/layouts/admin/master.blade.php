@@ -25,7 +25,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   -->
   <link rel="stylesheet" href="{{ asset('/bower_components/adminLTE/dist/css/skins/skin-blue.min.css', config('app.use_ssl')) }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.css">
-
+  <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css">
   <!-- requireJS -->
   <script type="text/javascript" data-main="{{ asset('js/config', config('app.use_ssl')) }}" src="{{ asset('js/libs/require.js', config('app.use_ssl')) }}"></script>
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->

@@ -21,7 +21,7 @@
 						</div>
 						<div class="form-group">
 							<label>Birthdate</label>
-							<textarea name="birthdate" class="form-control"></textarea>
+							<input type="text" name="date" id="date" class="form-control">
 						</div>
 						<div class="form-group">
 							<label class="radio-inline"><input type="radio" name="optradiosexo" value="m">M</label>
@@ -32,6 +32,10 @@
 							<input type="text" name="profession" class="form-control">
 						</div>
 						<div class="form-group">
+							<label>Position</label>
+							<input type="text" name="position" class="form-control">
+						</div>
+						<div class="form-group">
 							<label>Nationality</label>
 							<input type="text" name="nationality" class="form-control">
 						</div>
@@ -40,9 +44,20 @@
 							<input type="text" name="email" class="form-control">
 						</div>
 						<div class="form-group">
+							<label>Description</label>
+							<textarea name="description" class="form-control"></textarea>
+						</div>
+						<div class="form-group">
 							<label>Rating</label>
 							<div id="rater">
 							</div>
+						</div>
+						<div class="checkbox">
+							<label><input type="checkbox" name="is_active">is_active?</label>
+						</div>
+						<div class="form-group">
+							<label>Image URL</label>
+							<input type="text" name="image_url" class="form-control">
 						</div>
 						<input type="submit" class="btn btn-primary">
 					</div>
@@ -53,4 +68,13 @@
 	</div>
 @endsection
 
+@section("custom_script")
+	<script type="text/javascript">
+		require(["config"], function() {
+			require(["commons/datetimepicker"], function(datepicker) {
+				datepicker.initializeDatePicker("date");			
+			});
+		});
+	</script>
+@endsection
 @include("rateyo-submiter");
