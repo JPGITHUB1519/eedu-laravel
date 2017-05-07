@@ -47,4 +47,4 @@
 	</div>
 @endsection
 
-@include("rateyo-submiter");
+@include("layouts.rateyo-submiter");
