@@ -21,11 +21,11 @@
 						</div>
 						<div class="form-group">
 							<label>Birthdate</label>
-							<input type="text" name="date" id="date" class="form-control">
+							<input type="text" name="birthdate" id="date" class="form-control">
 						</div>
 						<div class="form-group">
-							<label class="radio-inline"><input type="radio" name="optradiosexo" value="m">M</label>
-							<label class="radio-inline"><input type="radio" name="optradiosexo" value="f">F</label>
+							<label class="radio-inline"><input type="radio" name="sexo" value="m">M</label>
+							<label class="radio-inline"><input type="radio" name="sexo" value="f">F</label>
 						</div>
 						<div class="form-group">
 							<label>Profession</label>
@@ -68,13 +68,17 @@
 	</div>
 @endsection
 
+{{-- @include("rateyo-submiter"); --}}
 @section("custom_script")
 	<script type="text/javascript">
 		require(["config"], function() {
-			require(["commons/datetimepicker"], function(datepicker) {
+			require(["commons/rateYo-activations", "commons/datetimepicker"], function(rateyo, datepicker) {
+				// init RateYo
+				rateyo.initializeRater("rater");
+				rateyo.submitRating("form", "rater", "rating");
+				// init datepicker
 				datepicker.initializeDatePicker("date");			
 			});
 		});
 	</script>
 @endsection
-@include("rateyo-submiter");

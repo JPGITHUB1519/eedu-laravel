@@ -41,7 +41,29 @@ class LeadersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate(request(), [
+                "name" => "required",
+                "lastname" => "required",
+                "position" => "required",
+                "email" => "required",
+                "description" => "required"
+        ]);
+        $leader = new Leader;
+        $leader->name = request("name");
+        $leader->lastname = request('lastname');
+        $leader->birthdate = request('birthdate');
+        $leader->sex = request('sexo');
+        $leader->profession = request('profession');
+        $leader->position = request('position');
+        $leader->nationality = request('nationality');
+        $leader->email = request('email');
+        $leader->description = request('description');
+        $leader->rating = request('rating');
+        $leader->is_active = request('is_active') ? True : False;
+        $leader->image_url = request('image_url');
+        $leader->save();
+        session()->flash("message", "Leader Save Correctly");
+        return redirect('/admin/leaders');
     }
 
     /**
