@@ -35,9 +35,9 @@
 							<label>Nationality</label>
 							<input type="text" name="nationality" class="form-control">
 						</div>
-						<div cl
-						<div class="checkbox">
-							<label><input type="checkbox" name="is_active">is_active?</label>
+						<div class="form-group">
+							<label>Email</label>
+							<input type="text" name="email" class="form-control">
 						</div>
 						<div class="form-group">
 							<label>Rating</label>
