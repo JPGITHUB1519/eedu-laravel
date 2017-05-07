@@ -58,6 +58,7 @@ class ProgramsController extends Controller
         $program->is_active = request('is_active') ? True : False;
         $program->rating = request('rating');
         $program->save();
+        session()->flash("message", "Program Saved Correctly");
         return redirect('/admin/programs');
 
     }
@@ -101,6 +102,7 @@ class ProgramsController extends Controller
         $program->is_active = request('is_active') ? True : False;
         $program->rating = request('rating');
         $program->update();
+        session()->flash("message", "Program Saved Correctly");
         return redirect('/admin/programs');
     }
 
@@ -113,6 +115,7 @@ class ProgramsController extends Controller
     public function destroy(Program $program)
     {
         $program->delete();
+        session()->flash("message", "Program deleted Correctly");
         return redirect('/admin/programs');
     }
 }

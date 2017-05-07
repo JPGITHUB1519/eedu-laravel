@@ -59,6 +59,7 @@ class CoursesController extends Controller
         $course->is_active = request('is_active') ? True : False;
         $course->rating = request('rating');
         $course->save();
+        session()->flash("message", "Course Saved Correctly");
         return redirect('/admin/courses');
 
     }
@@ -103,6 +104,7 @@ class CoursesController extends Controller
         $course->is_active = request('is_active') ? True : False;
         $course->rating = request('rating');
         $course->update();
+        session()->flash("message", "Course Saved Correctly");
         return redirect('/admin/courses');
     }
 
@@ -115,6 +117,7 @@ class CoursesController extends Controller
     public function destroy(Course $course)
     {
         $course->delete();
+        session()->flash("message", "Course deleted Correctly");
         return redirect('/admin/courses');
     }
 }

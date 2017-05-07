@@ -57,8 +57,6 @@ desired effect
 -->
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
-  <!-- flash message -->
-  @include('layouts.flash')
   <!-- Main Header -->
   @include('layouts.admin.header')
   <!-- Left side column. contains the logo and sidebar -->
@@ -68,6 +66,13 @@ desired effect
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
+    <script type="text/javascript">
+      require(["config"], function() {
+        require(["commons/flash-alert"], function(obj) {
+          obj.flashMessage();
+        });
+      });
+    </script>
       <h1>
         {{ $page_title or "Page Header" }}
         <small>{{ $page_description or "Default Description" }}</small>
@@ -80,7 +85,7 @@ desired effect
 
     <!-- Main content -->
     <section class="content">
-
+      @include('layouts.flash')
       <!-- Your Page Content Here -->
       @yield('content')
     </section>

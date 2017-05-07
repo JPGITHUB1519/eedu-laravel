@@ -62,7 +62,7 @@ class LeadersController extends Controller
         $leader->is_active = request('is_active') ? True : False;
         $leader->image_url = request('image_url');
         $leader->save();
-        session()->flash("message", "Leader Save Correctly");
+        session()->flash("message", "Leader Saved Correctly");
         return redirect('/admin/leaders');
     }
 
@@ -110,7 +110,7 @@ class LeadersController extends Controller
         $leader->is_active = request('is_active') ? True : False;
         $leader->image_url = request('image_url');
         $leader->save();
-        session()->flash("message", "Leader Save Correctly");
+        session()->flash("message", "Leader Saved Correctly");
         return redirect('/admin/leaders');
     }
 
@@ -123,6 +123,7 @@ class LeadersController extends Controller
     public function destroy(Leader $leader)
     {
         $leader->delete();
+        session()->flash("message", "Leader deleted Correctly");
         return redirect('/admin/leaders');
     }
 }
