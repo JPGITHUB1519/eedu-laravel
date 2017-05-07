@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Leader;
 
 class LeadersController extends Controller
 {
@@ -18,7 +19,8 @@ class LeadersController extends Controller
 
     public function admin_index()
     {
-        return view('leaders.admin_index');
+        $leaders = Leader::all();
+        return view('leaders.admin_index', compact('leaders'));
     }
 
     /**
@@ -28,7 +30,7 @@ class LeadersController extends Controller
      */
     public function create()
     {
-        //
+        return view('leaders.create');
     }
 
     /**

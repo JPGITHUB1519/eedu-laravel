@@ -37,5 +37,6 @@ Route::delete('/admin/courses/{course}', 'CoursesController@destroy');
 
 //Leaders
 Route::get("/admin/leaders", 'LeadersController@admin_index');
+Route::get("/admin/leaders/create", "LeadersController@create");
 Route::get('/home', 'HomeController@index');
 Auth::routes();

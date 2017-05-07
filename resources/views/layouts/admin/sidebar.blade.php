@@ -40,6 +40,7 @@
         <ul class="treeview-menu">
           <li><a href="/admin/programs">Programs</a></li>
           <li><a href="/admin/courses">Courses</a></li>
+          <li><a href="/admin/leaders">Leaders</a></li>
         </ul>
       </li>
       <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
