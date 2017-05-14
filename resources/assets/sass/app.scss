@@ -10,6 +10,7 @@
 
 // modules
 @import "modules/variables";
+@import "modules/mixings";
 
 // partials
 @import "partials/center";
@@ -18,7 +19,8 @@
 @import "partials/flash";
 @import "partials/padding";
 @import "partials/img";
-@import "partials/text"
+@import "partials/text";
+@import "partials/test"
 
 // vendor
 // @import "vendor/*";

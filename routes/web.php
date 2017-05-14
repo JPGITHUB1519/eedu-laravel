@@ -44,3 +44,9 @@ Route::put("/admin/leaders/{leader}", 'LeadersController@update');
 Route::delete('/admin/leaders/{leader}', 'LeadersController@destroy');
 Route::get('/home', 'HomeController@index');
 Auth::routes();
+
+// Testing Routes
+Route::get('/test', function()
+{
+	return view('test');
+});

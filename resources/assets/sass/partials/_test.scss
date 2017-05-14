@@ -1,0 +1,6 @@
+body
+{
+	@include respond-to(md) {
+		background-color: #FF0000 !important;
+	}
+}
